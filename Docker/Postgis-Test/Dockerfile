@@ -1,4 +1,4 @@
-FROM alpine:3.10.1
+FROM postgres:9.6.12-alpine
 LABEL version="0.1a"
 LABEL maintainer="Paal Pedersen"
 RUN apk update \
