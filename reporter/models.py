@@ -1,5 +1,3 @@
-from __future__ import unicode_literals
-from django.db import models
 from django.contrib.gis.db import models
 
 
@@ -9,7 +7,7 @@ class Incidences(models.Model):
 	location = models.PointField(srid=4326)
 	objects = models.Manager()
 
-	def __unicode__(self):
+	def __str__(self):
 		return self.name
 
 	class Meta:
@@ -21,8 +19,9 @@ class Counties(models.Model):
     cty_code = models.CharField(max_length=24)
     dis = models.IntegerField()
     geom = models.MultiPolygonField(srid=4326)
+    objects = models.Manager()
 
-    def __unicode__(self):
+    def __str__(self):
     	return self.counties
 
     class Meta:
