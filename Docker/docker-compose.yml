@@ -1,14 +1,14 @@
-version: '3'
+version: '3.7'
 
 services:
   db:
-    image: kartoza/postgis
+    image: mdillon/postgis
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASS=postgres
       - POSTGRES_DBNAME=agricom
     ports:
-      - "54320:54320"
+      - "5432:5432"
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
