@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'agricom.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'ENGINE': 'django.contrib.gis.db.backends.postgresql',
         'NAME': 'agricom',
         'USER': 'postgres',
-        'HOST': 'localhost',
+        'HOST': '0.0.0.0',
         'PASSWORD': 'postgres',
         'PORT': '5432',
     }

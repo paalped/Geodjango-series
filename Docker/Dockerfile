@@ -10,8 +10,7 @@ WORKDIR /Geodjango-series
 RUN pip install -r requirements.txt && \
     f=$(find / -name "manage.py") && \
     echo $f && \
-    python3 $f migrate && \
-    python3 $f runserver 0.0.0.0:8000
+    python3 $f migrate
 
 
 
