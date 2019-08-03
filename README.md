@@ -1,6 +1,6 @@
 # Geodjango Series Docker-Compose
 
-This is a geodjango project is a fork from https://github.com/wanjohikibui/Geodjango-series
+This geodjango project is a fork from https://github.com/wanjohikibui/Geodjango-series
 
 ### Set Up
 To set up the project, follow the steps;
