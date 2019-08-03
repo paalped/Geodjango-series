@@ -8,16 +8,12 @@ services:
       - POSTGRES_PASS=postgres
       - POSTGRES_DBNAME=agricom
     ports:
-      - "25432:25432"
-    networks:
-      - main
+      - "5432:5432"
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/code
-    networks:
-      - main
     ports:
       - "8000:8000"
     depends_on:

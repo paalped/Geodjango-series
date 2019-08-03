@@ -8,13 +8,6 @@ RUN apt-get install git
 RUN git clone https://github.com/paalped/Geodjango-series.git
 WORKDIR /Geodjango-series
 RUN pip install -r requirements.txt
-    
-RUN	f=$(find / -name "manage.py") && \ 
-	python3 $f makemigrations
-RUN f=$(find / -name "manage.py") && \ 
-	python3 $f migrate
-
-
 
 
 
